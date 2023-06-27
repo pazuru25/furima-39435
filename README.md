@@ -13,7 +13,8 @@
 | date_of_birth | date | null: false |
 
 ### Association
-- has_many :items
+- has_many :item
+- has_many :order
 
 ## itemsテーブル
 | Column | Type | Option |
@@ -31,3 +32,30 @@
 
 ### Association
 - belongs_to :user
+- has_one :order
+
+## ordersテーブル
+| Column | Type | Option |
+|-|-|-|
+| id(PK) | integer | null: false |
+| user(FK) | references | null: false, foreign_key: true |
+| item(FK) | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :user
+- belongs_to :item
+- has_one :shipping_addresses
+
+## shipping_addressesテーブル
+| Column | Type | Option |
+|-|-|-|
+| id(PK) | integer | null: false |
+| postal_code | string | null: false |
+| prefecture | text | null: false |
+| city | text | null: false |
+| addresses | text | null: false |
+| building | text | null: false |
+| phone_number | string | null: false |
+
+### Association
+- belongs_to :order
