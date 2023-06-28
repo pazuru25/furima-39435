@@ -51,10 +51,10 @@
 |-|-|-|
 | id(PK) | integer | null: false |
 | postal_code | string | null: false |
-| prefecture | text | null: false |
+| prefecture | integer | null: false |
 | city | text | null: false |
 | addresses | text | null: false |
-| building | text | null: false |
+| building | text |
 | phone_number | string | null: false |
 
 ### Association
