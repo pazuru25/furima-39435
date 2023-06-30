@@ -70,8 +70,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_28_020851) do
     t.text "addresses", null: false
     t.text "building"
     t.string "phone_number", null: false
+    t.bigint "order_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["order_id"], name: "index_shipping_addresses_on_order_id"
   end
 
   create_table "users", charset: "utf8", force: :cascade do |t|
@@ -97,4 +99,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_28_020851) do
   add_foreign_key "items", "users"
   add_foreign_key "orders", "items"
   add_foreign_key "orders", "users"
+  add_foreign_key "shipping_addresses", "orders"
 end

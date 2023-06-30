@@ -56,6 +56,7 @@
 | addresses | text | null: false |
 | building | text |
 | phone_number | string | null: false |
+| order(FK) | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :order
