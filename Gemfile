@@ -82,5 +82,4 @@ gem "active_hash"
 
 gem 'pry-rails'
 gem 'payjp'
-gem 'factory_bot_rails'
 gem 'gon'
