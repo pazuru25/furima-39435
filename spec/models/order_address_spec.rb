@@ -46,7 +46,7 @@ RSpec.describe OrderAddress, type: :model do
         @order_address.valid?
         expect(@order_address.errors.full_messages).to include("Addresses can't be blank")
       end
-      
+
       it 'phone_numberが空だと保存できないこと' do
         @order_address.phone_number = ''
         @order_address.valid?
@@ -58,7 +58,6 @@ RSpec.describe OrderAddress, type: :model do
         @order_address.valid?
         expect(@order_address.errors.full_messages).to include("Token can't be blank")
       end
-      end
     end
   end
-
+end
