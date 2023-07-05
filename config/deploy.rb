@@ -1,6 +1,6 @@
 # capistranoのバージョンを記載。固定のバージョンを利用し続け、バージョン変更によるトラブルを防止する
 lock '3.17.3'
-
+set :branch, 'main'
 # Capistranoのログの表示に利用する
 set :application, 'furima-39435'
 
