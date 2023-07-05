@@ -74,6 +74,9 @@ group :test do
   gem "factory_bot_rails"
   gem "faker"
 end
+group :production do
+  gem 'unicorn', '6.1.0'
+end
 
 gem "devise"
 gem "mini_magick"
