@@ -1,4 +1,3 @@
-	
 server '54.168.70.26', user: 'ec2-user', roles: %w{app db web}
 # server-based syntax
 # ======================
