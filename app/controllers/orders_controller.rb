@@ -44,13 +44,13 @@ class OrdersController < ApplicationController
     gon.public_key = ENV['PAYJP_PUBLIC_KEY']
   end
 
+  def set_item
+    @item = Item.find(params[:item_id])
+  end
+
   def move_to_index
     @item = Item.find(params[:item_id])
     return unless @item.user_id == current_user.id || @item.order.present?
     redirect_to root_path
-  end
-
-  def set_item
-    @item = Item.find(params[:item_id])
   end
 end
